@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestCases>
+  <TestCase>
+    <Array>7 4 17 99 89 70 1</Array>
+    <Digit>7</Digit>
+    <ExpectedResult>7 17 70</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <Array>10 -52 5 67 -5 5 33 4 25</Array>
+    <Digit>5</Digit>
+    <ExpectedResult>-52 5 -5 25</ExpectedResult>
+  </TestCase>
+</TestCases>
