@@ -36,16 +36,16 @@ namespace Filter
 
             List<int> result = new List<int>();
 
-            for (int i = 0; i < array.Length; i++)
+            foreach (var element in array)
             {
-                if (DigitContain(array[i], digit) && !result.Contains(array[i]))
-                {
-                    result.Add(array[i]);
-                }
+                if (IsContainsDigit(element, digit))
+                    result.Add(element);
             }
 
             return result.ToArray();
         }
+
+
 
         /// <summary>
         /// Check if the digit contains in the number.
@@ -53,13 +53,14 @@ namespace Filter
         /// <param name="number">Verified number.</param>
         /// <param name="digit">Digit which must be contains in the number</param>
         /// <returns>Return true if the digit contains in the number and false if not.</returns>
-        public static bool DigitContain(int number, int digit)
+        public static bool IsContainsDigit(int number, int digit)
         {
-            if (number.ToString().Contains(digit.ToString()))
+            while (number != 0)
             {
-                return true;
+                if (number % 10 == digit || number % 10 == -digit)
+                    return true;
+                number = number / 10;
             }
-
             return false;
         }
     }

@@ -11,7 +11,7 @@ namespace Filter.NUnitTests
     [TestFixture]
     public class FilterNunitTests
     {
-        [TestCase(new int[] { 7, 1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17 }, 7, ExpectedResult = new int[] { 7, 70, 17 })]
+        [TestCase(new int[] { 7, 1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17 }, 7, ExpectedResult = new int[] { 7,7, 70, 17 })]
         [TestCase(new int[] { 13, 8, 15, int.MinValue, 7, 69, 88, -8, 100, int.MaxValue, -18 }, 8, ExpectedResult =
             new int[] { 8, int.MinValue, 88, -8, int.MaxValue, -18 })]
         public int[] FilterDigit_Result(int[] array, int digit) => FilterDigit(array, digit);
