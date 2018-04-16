@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Filter
 {
-    public interface IPredicate
+    public interface IPredicate<T>
     {
-        bool IsMatch(int element);
+        bool IsMatch(T element);
     }
 }

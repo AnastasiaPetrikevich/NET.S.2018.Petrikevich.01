@@ -9,7 +9,7 @@ namespace Filter
 /// <summary>
 /// Classes of predicates.
 /// </summary>
-    public class ContainsDigit : IPredicate
+    public class ContainsDigit : IPredicate<int>
     {
         private int digit;
 
@@ -46,7 +46,7 @@ namespace Filter
         }
     }
 
-    public class EvenNumber : IPredicate
+    public class EvenNumber : IPredicate<int>
     {
         public bool IsMatch(int number)
         {
@@ -59,7 +59,7 @@ namespace Filter
         }
     }
 
-    public class OddNumber : IPredicate
+    public class OddNumber : IPredicate<int>
     {
         public bool IsMatch(int number)
         {
@@ -72,7 +72,7 @@ namespace Filter
         }
     }
 
-    public class SimpleNumber : IPredicate
+    public class SimpleNumber : IPredicate<int>
     {
         public bool IsMatch(int number)
         {
